@@ -79,29 +79,51 @@
     margin-bottom: 5%;
     border-radius: 7px;
     height: 40px;
+    width: 252px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-#PageCo main form button{
-    border: none;
-    background: #3321FF;
-    color: #FFFFFF;
+
+#PageCo main form .TalkToText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#PageCo main form .micro{
     padding-bottom: 2%;
+    margin-left: 10px;
     margin-bottom: 5%;
     border-radius: 7px;
-    height: 40px;
-}
-
-#PageCo main form button a{
+    padding: 10px 20px;
+    background-color: #3321FF;
     color: #FFFFFF;
-    text-decoration: none;
+    border: none;
 }
 
-#PageCo main form button:hover {
+#PageCo main form .micro:hover {
     cursor: pointer;
     background: #FFFFFF;
     color: #3321FF;
     border: solid 3px #3321FF;
+}
+
+#PageCo main form .co{
+    background: #3321FF;
+    color: #FFFFFF;
+    border-radius: 7px;
+    text-decoration: none;
+    text-align: center;
+    width: 250px;
+    padding: 5px 10px;
+}
+
+#PageCo main form .co:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #3321FF;
+    border: solid 3px #3321FF;
+    text-decoration: none;
 }
 
 #PageCo main form button:hover a{

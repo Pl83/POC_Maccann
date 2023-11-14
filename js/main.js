@@ -18,26 +18,25 @@ SwitchForm.addEventListener('click', () => {
     }
 });
 
-// Connexion  not working
-// const email = document.getElementById('email');
-// const password = document.getElementById('password');
-// const btnConnec = document.getElementById('btnConnec');
+// Talk To Text for input
+const OpenMics = document.querySelectorAll('.micro');
 
-// btnConnec.addEventListener('click', (e) => {
-//     //check si les champs sont remplis
-//     if (email.value === '' || password.value === '') {
-//         e.preventDefault();
-//         alert('Veuillez remplir tous les champs.');
-//     }
-//     //check si le mail est valide
-//     else if (!email.value.includes('@')) {
-//         e.preventDefault();
-//         alert('Veuillez entrer un email valide.');
-//     }
-//     //check si le mot de passe est valide
-//     else if (password.value.length < 6) {
-//         e.preventDefault();
-//         alert('Veuillez entrer un mot de passe de 6 caractères minimum.');
-//     }
-//     window.location.href = 'index.html';
-// });
+OpenMics.forEach((OpenMic) => {
+    OpenMic.addEventListener('click', () => {
+        console.log(OpenMic.previousElementSibling)
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'fr-FR';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.start();
+            recognition.onresult = function (e) {
+                OpenMic.previousElementSibling.value = e.results[0][0].transcript;
+                recognition.stop();
+            };
+            recognition.onerror = function (e) {
+                recognition.stop();
+            };
+        }
+    });
+});
