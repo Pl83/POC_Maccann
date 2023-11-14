@@ -1,3 +1,16 @@
+//Redirect to connexion page if not connected
+const token = localStorage.getItem('token');
+// check if token doesn't exist and the page is not connexion page then redirect to connexion page
+if (!token && window.location.pathname.includes('connexion.html') === false) {
+    window.location.href = 'connexion.html';
+}
+
+// To connecte 
+function Save() {
+    localStorage.setItem('token', 'token');
+    window.location.href = 'index.html';
+}
+
 // Switch de form inscription/connexion sur la page de connexion
 const inscrip = document.getElementById('inscrip');
 const connec = document.getElementById('connec');
