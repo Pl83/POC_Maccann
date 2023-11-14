@@ -65,48 +65,17 @@ OpenMics.forEach((OpenMic) => {
 // Update Navbar active tabs
 
 const navLinks = document.querySelectorAll('.navlink');
-console.log(navLinks);
+const path = window.location.pathname;
 
-if (window.location.pathname.includes('index')) {
-    navLinks[0].classList.add('selected');
-    navLinks[1].classList.remove('selected');
-    navLinks[2].classList.remove('selected');
-    navLinks[3].classList.remove('selected');
-    navLinks[4].classList.remove('selected');
-    navLinks[5].classList.remove('selected');
-} else if (window.location.pathname.includes('conger')) {
-    navLinks[0].classList.remove('selected');
-    navLinks[1].classList.add('selected');
-    navLinks[2].classList.remove('selected');
-    navLinks[3].classList.remove('selected');
-    navLinks[4].classList.remove('selected');
-    navLinks[5].classList.remove('selected');
-} else if (window.location.pathname.includes('fdt')) {
-    navLinks[0].classList.remove('selected');
-    navLinks[1].classList.remove('selected');
-    navLinks[2].classList.add('selected');
-    navLinks[3].classList.remove('selected');
-    navLinks[4].classList.remove('selected');
-    navLinks[5].classList.remove('selected');
-} else if (window.location.pathname.includes('racourcis')) {
-    navLinks[0].classList.remove('selected');
-    navLinks[1].classList.remove('selected');
-    navLinks[2].classList.remove('selected');
-    navLinks[3].classList.add('selected');
-    navLinks[4].classList.remove('selected');
-    navLinks[5].classList.remove('selected');
-} else if (window.location.pathname.includes('dmat')) {
-    navLinks[0].classList.remove('selected');
-    navLinks[1].classList.remove('selected');
-    navLinks[2].classList.remove('selected');
-    navLinks[3].classList.remove('selected');
-    navLinks[4].classList.add('selected');
-    navLinks[5].classList.remove('active');
-} else if (window.location.pathname.includes('guide')) {
-    navLinks[0].classList.remove('selected');
-    navLinks[1].classList.remove('selected');
-    navLinks[2].classList.remove('selected');
-    navLinks[3].classList.remove('selected');
-    navLinks[4].classList.remove('selected');
-    navLinks[5].classList.add('selected');
+const sections = ['index', 'conger', 'fdt', 'racourcis', 'dmat', 'guide'];
+
+for (let i = 0; i < navLinks.length; i++) {
+    const section = sections[i];
+    const isSelected = path.includes(section);
+    
+    if (isSelected) {
+        navLinks[i].classList.add('selected');
+    } else {
+        navLinks[i].classList.remove('selected');
+    }
 }
