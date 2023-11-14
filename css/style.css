@@ -1,9 +1,11 @@
+/* Global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page de Connexion */
 #PageCo {
     width: 100%;
     height: 100vh;
@@ -13,7 +15,29 @@
 }
 
 #PageCo main {
-    background-color: chartreuse;
+    background-color: #D8E5FF; /* ne s'applique que si le navigateur ne suport pas le linear gradient */
+    background-image: linear-gradient(to bottom right, #FFFFFF, #C2D7FF);
+}
+
+#PageCo main h1 {
+    color: #3321FF;
+}
+
+#PageCo main h2 {
+    color: #3321FF;
+}
+
+#PageCo main #SwitchForm {
+    background: none;
+    border: none;
+    color: #3321FF;
+    text-decoration: underline;
+}
+
+#PageCo main #SwitchForm:hover {
+    cursor: pointer;
+    border: solid 3px black;
+    border-radius: 4px;
 }
 
 #PageCo aside {
