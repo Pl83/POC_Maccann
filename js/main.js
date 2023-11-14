@@ -23,19 +23,21 @@ const connec = document.getElementById('connec');
 const SwitchForm = document.getElementById('SwitchForm');
 const ToSwitch = document.getElementById('ToSwitch');
 
-SwitchForm.addEventListener('click', () => {
-    if (inscrip.style.display === 'none') {
-        inscrip.style.display = 'block';
-        connec.style.display = 'none';
-        SwitchForm.innerHTML = 'connecter vous.';
-        ToSwitch.innerHTML = 'déjà membre ?';
-    } else {
-        inscrip.style.display = 'none';
-        connec.style.display = 'block';
-        SwitchForm.innerHTML = 'inscriver vous.';
-        ToSwitch.innerHTML = 'pas encore membre ?';
-    }
-});
+if (window.location.pathname.includes('connexion.html')) {
+    SwitchForm.addEventListener('click', () => {
+        if (inscrip.style.display === 'none') {
+            inscrip.style.display = 'block';
+            connec.style.display = 'none';
+            SwitchForm.innerHTML = 'connecter vous.';
+            ToSwitch.innerHTML = 'déjà membre ?';
+        } else {
+            inscrip.style.display = 'none';
+            connec.style.display = 'block';
+            SwitchForm.innerHTML = 'inscriver vous.';
+            ToSwitch.innerHTML = 'pas encore membre ?';
+        }
+    });
+}
 
 // Talk To Text for input
 const OpenMics = document.querySelectorAll('.micro');
@@ -59,3 +61,52 @@ OpenMics.forEach((OpenMic) => {
         }
     });
 });
+
+// Update Navbar active tabs
+
+const navLinks = document.querySelectorAll('.navlink');
+console.log(navLinks);
+
+if (window.location.pathname.includes('index')) {
+    navLinks[0].classList.add('selected');
+    navLinks[1].classList.remove('selected');
+    navLinks[2].classList.remove('selected');
+    navLinks[3].classList.remove('selected');
+    navLinks[4].classList.remove('selected');
+    navLinks[5].classList.remove('selected');
+} else if (window.location.pathname.includes('conger')) {
+    navLinks[0].classList.remove('selected');
+    navLinks[1].classList.add('selected');
+    navLinks[2].classList.remove('selected');
+    navLinks[3].classList.remove('selected');
+    navLinks[4].classList.remove('selected');
+    navLinks[5].classList.remove('selected');
+} else if (window.location.pathname.includes('fdt')) {
+    navLinks[0].classList.remove('selected');
+    navLinks[1].classList.remove('selected');
+    navLinks[2].classList.add('selected');
+    navLinks[3].classList.remove('selected');
+    navLinks[4].classList.remove('selected');
+    navLinks[5].classList.remove('selected');
+} else if (window.location.pathname.includes('racourcis')) {
+    navLinks[0].classList.remove('selected');
+    navLinks[1].classList.remove('selected');
+    navLinks[2].classList.remove('selected');
+    navLinks[3].classList.add('selected');
+    navLinks[4].classList.remove('selected');
+    navLinks[5].classList.remove('selected');
+} else if (window.location.pathname.includes('dmat')) {
+    navLinks[0].classList.remove('selected');
+    navLinks[1].classList.remove('selected');
+    navLinks[2].classList.remove('selected');
+    navLinks[3].classList.remove('selected');
+    navLinks[4].classList.add('selected');
+    navLinks[5].classList.remove('active');
+} else if (window.location.pathname.includes('guide')) {
+    navLinks[0].classList.remove('selected');
+    navLinks[1].classList.remove('selected');
+    navLinks[2].classList.remove('selected');
+    navLinks[3].classList.remove('selected');
+    navLinks[4].classList.remove('selected');
+    navLinks[5].classList.add('selected');
+}
