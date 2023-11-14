@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#PageCo {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#PageCo main {
+    background-color: chartreuse;
+}
+
+#PageCo aside {
+    background-color: aqua;
+}
