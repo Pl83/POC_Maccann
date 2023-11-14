@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="PageCo">
+        <main>
+            <div>
+                <h1>McCann</h1>
+                <h2>HOME</h2>
+                <div>
+                    <h3>Créer votre nouveau compte</h3>
+                    <p><span id="ToSwitch">pas encore membre ?</span> <button id="SwitchForm">inscriver vous.</button></p>
+                </div>
+            </div>
+            <div id="inscrip" style="display: none;">
+                <form action="">
+                    <label for="prénom">Prénom</label>
+                    <div class="TalkToText">
+                        <input type="text" name="prénom" id="">
+                        <p class="micro">🎤</p>
+                    </div>
+    
+                    <label for="nom">Nom</label>
+                    <div class="TalkToText">
+                        <input type="text" name="nom" id="">
+                        <p class="micro">🎤</p>
+                    </div>
+    
+                    <label for="eamil">Email</label>
+                    <div class="TalkToText">
+                        <input type="text" name="email" id="">
+                        <p class="micro">🎤</p>
+                    </div>
+                    
+    
+                    <button class="co">Créee votre compte</button>
+                </form>
+            </div>
+            <div id="connec" style="display: block;">
+                <form action="">
+                    <label for="email">Email</label>
+                    <div class="TalkToText">
+                        <input type="text" name="email" id="email">
+                        <p class="micro">🎤</p>
+                    </div>
+    
+                    <label for="password">Mot de passe</label>
+                    <div class="TalkToText">
+                        <input type="password" name="password" id="password">
+                        <p class="micro">🎤</p>
+                    </div>
+    
+                    <a href="#" class="co" onclick="Save()">Connecter vous</a>
+                </form>
+            </div>
+        </main>
+        <aside>
+            <img src="img/home.png" alt="">
+        </aside>
+    </section>
+</body>
+</html>
