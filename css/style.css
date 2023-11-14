@@ -18,7 +18,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    scroll-behavior: none;
+    overflow: hidden;
 }
 
 #PageCo main {
@@ -28,11 +28,26 @@
 
 #PageCo main h1 {
     color: #3321FF;
-    font-size: 3rem;
+    font-size: 5rem;
+    padding-top: 10%;
+    padding-left: 15%;
 }
 
 #PageCo main h2 {
     color: #3321FF;
+    font-size: 2.5rem;
+    padding-left: 15%;
+}
+
+#PageCo main h3 {
+    padding-left: 15%;
+    font-size: 1.5rem;
+    padding-top: 2%;
+}
+
+#PageCo main p {
+    padding-left: 15%;
+    font-size: 1.1rem;
 }
 
 #PageCo main #SwitchForm {
@@ -51,8 +66,48 @@
 #PageCo main form {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 70%;
+    padding-left: 15%;
+    padding-top: 2%;
+    font-size: 1.1rem;
 }
+
+#PageCo main form input {
+    border: none;
+    background: #FFFFFF;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+    border-radius: 7px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#PageCo main form button{
+    border: none;
+    background: #3321FF;
+    color: #FFFFFF;
+    padding-bottom: 2%;
+    margin-bottom: 5%;
+    border-radius: 7px;
+    height: 40px;
+}
+
+#PageCo main form button a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#PageCo main form button:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #3321FF;
+    border: solid 3px #3321FF;
+}
+
+#PageCo main form button:hover a{
+    color: #3321FF;
+}
+
 
 #PageCo aside {
     background-color: aqua;
