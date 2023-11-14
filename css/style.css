@@ -12,8 +12,6 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background: linear-gradient(108deg, #FFF 0%, #EBF2FF 50.53%, #D8E5FF 100%);
     font-family: 'Futura', sans-serif;
 }
@@ -84,7 +82,7 @@ nav a.selected img {
     filter: brightness(0) invert(1);
 }
 
-section {
+.SectionMiseForme {
     width: 70%;
     margin-left: 30%;
     box-sizing: border-box;

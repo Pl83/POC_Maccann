@@ -11,6 +11,12 @@ function Save() {
     window.location.href = 'index.html';
 }
 
+//To disconnecte
+function UnSave() {
+    localStorage.removeItem('token');
+    window.location.href = 'connexion.html';
+}
+
 // Switch de form inscription/connexion sur la page de connexion
 const inscrip = document.getElementById('inscrip');
 const connec = document.getElementById('connec');
