@@ -15,7 +15,7 @@
                 <h2>HOME</h2>
                 <div>
                     <h3>Créer votre nouveau compte</h3>
-                    <p>déjà membre ? <button id="SwitchForm">inscriver vous.</button></p>
+                    <p><span id="ToSwitch">pas encore membre ?</span> <button id="SwitchForm">inscriver vous.</button></p>
                 </div>
             </div>
             <div id="inscrip" style="display: none;">
@@ -35,12 +35,13 @@
             <div id="connec" style="display: block;">
                 <form action="">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="">
+                    <input type="text" name="email" id="email">
     
                     <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="">
+                    <input type="password" name="password" id="password">
     
-                    <button><a href="index.html">Connecter vous</a></button>
+                    <!-- <button><a href="index.html">Connecter vous</a></button> -->
+                    <button id="btnConnec">Connecter vous</button>
                 </form>
             </div>
         </main>
