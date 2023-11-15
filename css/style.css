@@ -143,6 +143,9 @@ input[type="text"] {
     padding-top: 3%;
 }
 
+/* Fin Global */
+
+/* Home page */
 .second-sec {
     color: #1E1E1E;
     margin-top: 5%;
@@ -188,6 +191,8 @@ input[type="text"] {
     left: 30%;
     transform: translate(-50%, -50%);
 }
+/* Fin Home page */
+
 
 /* Page de Connexion */
 #PageCo {
@@ -319,3 +324,9 @@ input[type="text"] {
     height: 100%;
     object-fit: cover;
 }
+
+/* Fin page connexion
+
+/* Page DMAT */
+
+/* Fin Page DMAT */
