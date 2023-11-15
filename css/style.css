@@ -503,6 +503,11 @@ nav a.selected img, .last-child.selected img {
     font-size: 1.5rem;
 }
 
+.Box:hover {
+    cursor: pointer;
+    border: solid 2px black;
+}
+
 .UnderBox {
     display: flex;
     flex-direction: row;
@@ -570,6 +575,11 @@ nav a.selected img, .last-child.selected img {
 
 }
 
+.timesheet-date .picker div:hover, .timesheet-time div:hover {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
 .timesheet-date .picker .arrow {
     width: 60px;
     height: 60px;
@@ -610,7 +620,10 @@ nav a.selected img, .last-child.selected img {
     border: 1px solid rgba(0, 0, 0, 0.187);
     border-radius: .5rem;
     padding: .5rem;
+}
 
+.timesheet-bottom > div div input:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 /* End Timesheet */
 
@@ -700,6 +713,18 @@ nav a.selected img, .last-child.selected img {
     width: 30%;
 }
 
+.CorectifCss #CorectifBtn:hover {
+    cursor: pointer;
+    color: #3321FF;
+    background: #FFF;
+    border: solid 3px #3321FF;
+}
+
+.CorectifCss #date:hover, #left:hover, #right:hover, #fuseau:hover, #down:hover {
+    cursor: pointer;
+    border: solid 2px black;
+}
+
 /* fin conger page */
 
 /* page guide */
@@ -737,6 +762,11 @@ nav a.selected img, .last-child.selected img {
     width: 15%;
 }
 
+#Contacte .ContacteCard:hover {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
 #Contacte .ContacteCard img {
     position: relative;
     top : 50%;
@@ -763,6 +793,13 @@ nav a.selected img, .last-child.selected img {
     font-size: 1.2rem;
 }
 
+#PdfArea .Pdf:hover {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
 #PdfArea .Pdf span {
     color: #555555;
 }
+
+/* fin page guide */

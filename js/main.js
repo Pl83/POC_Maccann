@@ -117,6 +117,7 @@ if (window.location.pathname.includes('racourcis.html')) {
         box.appendChild(firstImage);
         box.appendChild(p);
         box.appendChild(underBox);
+        box.tabIndex = i+1;
 
         order.appendChild(box);
     }
@@ -126,6 +127,7 @@ if (window.location.pathname.includes('racourcis.html')) {
     let add = document.createElement('img');
     add.src = 'img/Racou_Add.png';
     box.appendChild(add);
+    box.tabIndex = 18;
     order.appendChild(box);
 
 }
