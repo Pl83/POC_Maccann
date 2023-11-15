@@ -79,3 +79,33 @@ for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].classList.remove('selected');
     }
 }
+
+// Demande de matériel contenue interactif, changement d'étape
+
+const btn = document.getElementById('FormNext');
+const dots = document.querySelectorAll('.Dot');
+const FirstImg = document.getElementById('FirstImg');
+const SecondImg = document.getElementById('SecondImg');
+const titre = document.querySelector('#form h4');
+const form = document.querySelector('#form form');
+var step = 1;
+console.log(dots);
+console.log(titre.innerHTML);
+
+btn.addEventListener('click', () => {
+    if (step === 1){
+        dots[0].classList.remove('CurrentDot');
+        dots[1].classList.add('CurrentDot');
+        FirstImg.src = 'img/full_line.png';
+        SecondImg.src = 'img/dashed_line.png';
+        titre.innerHTML = 'Etape 2 : Choix du matériel';
+        form.style.opacity = '0';
+        step = 2;
+    } else if (step === 2){
+        dots[1].classList.remove('CurrentDot');
+        dots[2].classList.add('CurrentDot');
+        SecondImg.src = 'img/full_line.png';
+        titre.innerHTML = 'Etape 3 : Finalisation';
+        step = 3;
+    }
+});

@@ -26,7 +26,7 @@
     <section class="SectionMiseForme first-sec">
         <label class="input-label">
             <img class="search-icon" src="./img/loupe_logo.png" alt="Search logo">
-            <input type="text" placeholder="Recherche">
+            <input  type="text" placeholder="Recherche">
         </label>
         <button><img src="./img/cloche_logo.png" alt="cloche logo"></button>
         <button><img src="./img/profil_logo.png" alt="profil logo"></button>
@@ -37,7 +37,7 @@
             <h3>Mccann vous accompagne dans vos demandes de matériel !</h3>
             <p>Si vous avez des besoins spécifique de matériel, cette section vous permet de faire <br>une demande. <span id="FalseLink">Remplissez le formulaire</span></p>
         </div>
-        <div>
+        <div id="SideAndForm">
             <div id="Side">
                 <h4>Suivi du formulaire</h4>
                 <div class="Etape">
@@ -47,7 +47,7 @@
                         <p>Information personnel</p>
                     </div>
                 </div>
-                <img src="img/dashed_line.png" alt="">
+                <img id="FirstImg" src="img/dashed_line.png" alt="">
                 <div class="Etape">
                     <div class="Dot"></div>
                     <div>
@@ -55,7 +55,7 @@
                         <p>Choix matériel</p>
                     </div>
                 </div>
-                <img src="img/full_line.png" alt="">
+                <img id="SecondImg" src="img/full_line.png" alt="">
                 <div class="Etape">
                     <div class="Dot"></div>
                     <div>
@@ -65,37 +65,50 @@
                 </div>
                 <p>Un soucis ? <a href="#">Demandez nous</a></p>
             </div>
-            <div>
+            <div id="form">
                 <h4>Etape 1 : Information personnel</h4>
                 <form action="">
-                    <div>
-                        <label for="prenom">Prénom</label>
-                        <input type="text" name="prenom">
+                    <div class="InputGroup">
+                        <div>
+                            <label for="prenom">Prénom</label>
+                            <input class="DmatInput" type="text" name="prenom">
+                        </div>
                         
-                        <label for="nom">Nom</label>
-                        <input type="text" name="nom">
+                        <div>
+                            <label for="nom">Nom</label>
+                            <input class="DmatInput" type="text" name="nom">
+                        </div>
                     </div>
-                    <div>
-                        <label for="poste">Poste</label>
-                        <input type="text" name="poste">
+                    <div class="InputGroup">
+                        <div>
+                            <label for="poste">Poste</label>
+                            <input class="DmatInput" type="text" name="poste">
+                        </div>
 
-                        <label for="email">Email</label>
-                        <input type="email" name="email">
+                        <div>
+                            <label for="email">Email</label>
+                            <input class="DmatInput" type="email" name="email">
+                        </div>
                     </div>
-                    <div>
-                        <label for="pmr">Posséder vous des contraintes de santé ?</label>
-                        <select name="pmr" id="pmr">
-                            <option value="pmr">PMR</option>
-                            <option value="aveugle">aveugle</option>
-                            <option value="sourd">sourd</option>
-                            <option value="autre">autre</option>
-                        </select>
+                    <div class="InputGroup">
+                        <div>
+                            <label for="pmr">Posséder vous des contraintes de santé ?</label>
+                            <select class="DmatInput" name="pmr" id="pmr">
+                                <option value="non">non</option>
+                                <option value="pmr">PMR</option>
+                                <option value="aveugle">aveugle</option>
+                                <option value="sourd">sourd</option>
+                                <option value="autre">autre</option>
+                            </select>
+                        </div>
 
-                        <label for="docc">Document complémentaire :</label>
-                        <input type="file" name="docc">
+                        <div>
+                            <label for="docc">Document complémentaire :</label>
+                            <input class="DmatInput" type="file" name="docc">
+                        </div>
                     </div>
                 </form>
-                <button>SUIVANT</button>
+                <button id="FormNext">SUIVANT</button>
             </div>
         </div>
     </section>
