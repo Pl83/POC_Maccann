@@ -79,3 +79,82 @@ for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].classList.remove('selected');
     }
 }
+
+// Génaration contenu racourcis
+
+if (window.location.pathname.includes('racourcis.html')) {
+    const order = document.getElementById('order');
+    
+    const boxTypes = [
+        { image: 'img/Racou_Teams.png', label: 'Teams', code: 'T' },
+        { image: 'img/Racou_Mail.png', label: 'Mail', code: 'M' },
+        { image: 'img/Racou_Linkdin.png', label: 'Linkdin', code: 'L' }
+    ];
+
+    for (let i = 0; i < 15; i++) {
+        const randomBoxType = boxTypes[Math.floor(Math.random() * boxTypes.length)];
+
+        const box = document.createElement('div');
+        box.classList.add('Box');
+
+        const firstImage = document.createElement('img');
+        firstImage.src = randomBoxType.image;
+
+        const p = document.createElement('p');
+        p.innerHTML = randomBoxType.label;
+
+        const underBox = document.createElement('div');
+        underBox.classList.add('UnderBox');
+
+        const secondImage = document.createElement('img');
+        secondImage.src = 'img/Racou_CM.png';
+
+        const p2 = document.createElement('p');
+        p2.innerHTML = ` + ${randomBoxType.code}`;
+
+        underBox.appendChild(secondImage);
+        underBox.appendChild(p2);
+        box.appendChild(firstImage);
+        box.appendChild(p);
+        box.appendChild(underBox);
+
+        order.appendChild(box);
+    }
+
+    let box = document.createElement('div');
+    box.classList.add('Box');
+    let add = document.createElement('img');
+    add.src = 'img/Racou_Add.png';
+    box.appendChild(add);
+    order.appendChild(box);
+
+}
+
+
+// Demande de matériel contenue interactif, changement d'étape
+
+const btn = document.getElementById('FormNext');
+const dots = document.querySelectorAll('.Dot');
+const FirstImg = document.getElementById('FirstImg');
+const SecondImg = document.getElementById('SecondImg');
+const titre = document.querySelector('#form h4');
+const form = document.querySelector('#form form');
+var step = 1;
+
+btn.addEventListener('click', () => {
+    if (step === 1){
+        dots[0].classList.remove('CurrentDot');
+        dots[1].classList.add('CurrentDot');
+        FirstImg.src = 'img/full_line.png';
+        SecondImg.src = 'img/dashed_line.png';
+        titre.innerHTML = 'Etape 2 : Choix du matériel';
+        form.style.opacity = '0';
+        step = 2;
+    } else if (step === 2){
+        dots[1].classList.remove('CurrentDot');
+        dots[2].classList.add('CurrentDot');
+        SecondImg.src = 'img/full_line.png';
+        titre.innerHTML = 'Etape 3 : Finalisation';
+        step = 3;
+    }
+});
