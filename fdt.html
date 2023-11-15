@@ -1,39 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
-    <title>Feuille de Temps</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <title>Feuille de Temps</title>
 </head>
 <body>
-    <header>
-        <div>
-            <h1 id="McCann">McCann</h1>
-            <h2 id="Home">HOME</h2>
+  <header>
+    <div>
+      <h1 id="McCann">McCann</h1>
+      <h2 id="Home">HOME</h2>
+    </div>
+    <nav>
+      <a href="index.html" class="navlink"><img src="./img/home_logo.png" alt="home logo">Home</a>
+      <a href="conger.html" class="navlink"><img src="./img/conge_logo.png" alt="home logo">Soldes de congés</a>
+      <a href="fdt.html" class="navlink"><img src="./img/feuille_logo.png" alt="home logo">Feuille de temps</a>
+      <a href="racourcis.html" class="navlink"><img src="./img/raccourcis_logo.png" alt="home logo">Raccourcis</a>
+      <a href="dmat.html" class="navlink"><img src="./img/matos_logo.png" alt="home logo">Demande de matériels</a>
+      <a href="guide.html" class="navlink"><img src="./img/guide_logo.png" alt="guide logo">Guide</a>
+    </nav>
+    <a href="#" class="last-child" onclick="UnSave()"><img src="./img/deco_logo.png" alt="home logo">Déconnexion</a>
+
+  </header>
+  <section class="SectionMiseForme first-sec">
+    <label class="input-label">
+      <img class="search-icon" src="./img/loupe_logo.png" alt="Search logo">
+      <input type="text" placeholder="Rechercher">
+    </label>
+    <div>
+      <button>
+        <img src="./img/cloche_logo.png" alt="cloche logo">
+      </button>
+      <button>
+        <img src="./img/profil_logo.png" alt="profil logo">
+      </button>
+      <button id="FlagCorectif">
+        <img  src="./img/🦆 icon _French Guiana_.png" alt="choisir langue">
+      </button>
+    </div>
+  </section>
+  <section class="SectionMiseForme">
+    <div class="timesheet-container">
+      <p>
+        Les feuille de temps servent à retracer tes journées de travails.
+        <br>
+        Tu peux retrouver les informations du fonctionnement du système dans <span>l’onglet information</span>
+      </p>
+      
+      <div class="timesheet">
+        <div class="timesheet-top">
+          <div class="timesheet-info">
+            <div class="timesheet-date">
+              <span>Calendrier : semaine</span>
+              <div class="picker">
+                <div>
+                  21 sept 2023 - 25 sept 2023
+                  <img src="img/calendar.png" alt="calendar icon">
+                </div>
+                <div class="arrow">
+                  <img src="img/arrow.png" alt="">
+                </div>
+                <div class="arrow" style="transform: rotate(-180deg);">
+                  <img src="img/arrow.png" alt="">
+                </div>
+                <div>
+                  Aujourd'hui
+                </div>
+              </div>
+            </div>
+            <div class="timesheet-time">
+              <span>Fuseaux horaire</span>
+              <div style="text-transform: uppercase;">
+                utc + 1
+                <img src="img/arrow-selector.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="timesheet-planning">
+            <p>
+              Hervé Joly
+            </p>
+            <div>
+              <span>Lun 21 sept</span>
+              <span>Mar 22 sept</span>
+              <span>Mer 23 sept</span>
+              <span>Jeu 24 sept</span>
+              <span>Ven 25 sept</span>
+            </div>
+          </div>
         </div>
-        <nav>
-            <a href="index.html" class="navlink"><img src="./img/home_logo.png" alt="home logo">Home</a>
-            <a href="conger.html" class="navlink"><img src="./img/conge_logo.png" alt="home logo">Soldes de congés</a>
-            <a href="fdt.html" class="navlink"><img src="./img/feuille_logo.png" alt="home logo">Feuille de temps</a>
-            <a href="racourcis.html" class="navlink"><img src="./img/raccourcis_logo.png" alt="home logo">Raccourcis</a>
-            <a href="dmat.html" class="navlink"><img src="./img/matos_logo.png" alt="home logo">Demande de matériels</a>
-            <a href="guide.html" class="navlink"><img src="./img/guide_logo.png" alt="guide logo">Guide</a>
-            <a href="#" class="last-child" onclick="UnSave()"><img src="./img/deco_logo.png" alt="home logo">Déconnexion</a>
-        </nav>
-    </header>
-    <section class="SectionMiseForme first-sec">
-        <label class="input-label">
-            <img class="search-icon" src="./img/loupe_logo.png" alt="Search logo">
-            <input type="text" placeholder="Recherche">
-        </label>
-        <button><img src="./img/cloche_logo.png" alt="cloche logo"></button>
-        <button><img src="./img/profil_logo.png" alt="profil logo"></button>
-        <button id="FlagCorectif" ><img  src="./img/🦆 icon _French Guiana_.png" alt="choisir langue"></button>
-    </section>
-    <section class="SectionMiseForme">
-        <!-- write your code here -->
-    </section>
+        <div class="timesheet-bottom">
+          <div>
+            <p>
+              Mastercard
+            </p>
+            <div>
+              <input type="text" name="" id="" placeholder="+4.00">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+            </div>
+          </div>
+          <div>
+            <p>
+              L'oréal
+            </p>
+            <div>
+              <input type="text" name="" id="" placeholder="+4.00">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+            </div>
+          </div>
+          <div>
+            <p>
+              Nesquik
+            </p>
+            <div>
+              <input type="text" name="" id="" placeholder="+4.00">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+              <input type="text" name="" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

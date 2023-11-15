@@ -14,6 +14,9 @@
 body {
     background: linear-gradient(108deg, #FFF 0%, #EBF2FF 50.53%, #D8E5FF 100%);
     font-family: 'Futura Now Text', sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
 }
 
 header {
@@ -21,7 +24,7 @@ header {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 30%;
+    width: 20%;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -50,7 +53,7 @@ nav {
     height: 56px;
 }
   
-nav a {
+nav a, .last-child{
     color: #555;
     font-size: 20px;
     font-style: normal;
@@ -67,80 +70,81 @@ nav a {
     transition: background-color 0.3s;
 }
 
-nav a img {
+.last-child {
+    margin-top: auto;
+    padding-left: 5%;
+    width: 255px;
+}
+
+nav a img, .last-child img {
     margin-right: 10px;
     max-height: 20px;
 }
 
-nav a.last-child {
-    margin-top: 60%;
-}
-
-nav a:hover {
+nav a:hover, .last-child:hover {
     background-color: #3321FF;
     color: #FFF;
 }
 
-nav a:hover img {
+nav a:hover img, .last-child:hover img {
     filter: brightness(0) invert(1);
 }
 
-nav a.selected {
+nav a.selected, .last-child.selected{
     background-color: #3321FF;
     color: #fff;
 }
 
-nav a.selected img {
+nav a.selected img, .last-child.selected img {
     filter: brightness(0) invert(1);
 }
 
 .SectionMiseForme {
-    width: 70%;
-    margin-left: 30%;
+    width: 80%;
+    margin-left: 20%;
     box-sizing: border-box;
 }
 
 .input-label {
     position: relative;
     align-items: center;
-}
-
-.search-icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 20px;
-}
-
-input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    padding-left: 30px;
-    margin-bottom: 10px;
-    border-radius: 49px;
-    background: #FFF;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
     box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.20);
+    gap: 1.5rem;
+}
+
+.input-label input[type="text"] {
+    border: none;
+    font-size: 1.2rem;
+    width: 100%;
+    outline: none;
 }
 
 .SectionMiseForme button {
-    margin-left: 5%;
-    border-radius: 49px;
+    border-radius: 50%;
     background: #FFF;
     box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.20);
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-}
-
-#FlagCorectif img{
-    width: 100%;
-    height: 95%;
-    object-fit: contain;
+    width: 60px;
+    height: 60px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .first-sec {
-    padding-top: 3%;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.first-sec div {
+    display: flex;
+    gap: 1.5rem;
 }
 
 /* Fin Global */
@@ -489,6 +493,108 @@ input[type="text"] {
     font-size: 1.5rem;
 }
 
+/* Fin Page DMAT */
+
+/* Timmesheet page */
+
+.timesheet-container {
+    padding-top: 3rem;
+    font-size: 20px;
+    height: 100%;
+}
+
+.timesheet-container p span {
+    color: #3321FF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.timesheet {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.timesheet-top {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.timesheet-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timesheet-info .timesheet-date span, .timesheet-time span {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.timesheet-date .picker {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.timesheet-date .picker div, .timesheet-time div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.20);
+
+}
+
+.timesheet-date .picker .arrow {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.timesheet-planning, .timesheet-bottom > div {
+    display: flex;
+    gap: 7rem;
+    background-color: #3321FF;
+    color: white;
+    border-radius: .5rem;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.20);
+    padding: 1rem 3rem;
+}
+
+.timesheet-bottom > div p, .timesheet-planning p {
+    width: 10%;
+}
+
+.timesheet-planning div, .timesheet-bottom > div div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.timesheet-bottom > div {
+    background-color: white;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.timesheet-bottom > div div input {
+    border: 1px solid rgba(0, 0, 0, 0.187);
+    border-radius: .5rem;
+    padding: .5rem;
+
+}
+/* End Timesheet */
+
 .UnderBox {
     display: flex;
     flex-direction: row;
@@ -497,3 +603,4 @@ input[type="text"] {
     justify-content: center;
     font-size: 1.2rem;
 }
+
