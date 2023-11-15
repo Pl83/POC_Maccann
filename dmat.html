@@ -35,29 +35,29 @@
     <section class="SectionMiseForme dmat">
         <div>
             <h3>Mccann vous accompagne dans vos demandes de matériel !</h3>
-            <p>Si vous avez des besoins spécifique de matériel, cette section vous permet de faire une demande. <span>Remplissez le formulaire</span></p>
+            <p>Si vous avez des besoins spécifique de matériel, cette section vous permet de faire <br>une demande. <span id="FalseLink">Remplissez le formulaire</span></p>
         </div>
         <div>
-            <div>
-                <p></p>
-                <div>
-                    <span></span>
+            <div id="Side">
+                <h4>Suivi du formulaire</h4>
+                <div class="Etape">
+                    <div class="CurrentDot Dot"></div>
                     <div>
                         <p>Etape 1</p>
                         <p>Information personnel</p>
                     </div>
                 </div>
-                <img src="" alt="">
-                <div>
-                    <span></span>
+                <img src="img/dashed_line.png" alt="">
+                <div class="Etape">
+                    <div class="Dot"></div>
                     <div>
                         <p>Etape 2</p>
                         <p>Choix matériel</p>
                     </div>
                 </div>
-                <img src="" alt="">
-                <div>
-                    <span></span>
+                <img src="img/full_line.png" alt="">
+                <div class="Etape">
+                    <div class="Dot"></div>
                     <div>
                         <p>Etape 3</p>
                         <p>Finalisation</p>
@@ -66,7 +66,36 @@
                 <p>Un soucis ? <a href="#">Demandez nous</a></p>
             </div>
             <div>
+                <h4>Etape 1 : Information personnel</h4>
+                <form action="">
+                    <div>
+                        <label for="prenom">Prénom</label>
+                        <input type="text" name="prenom">
+                        
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom">
+                    </div>
+                    <div>
+                        <label for="poste">Poste</label>
+                        <input type="text" name="poste">
 
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div>
+                        <label for="pmr">Posséder vous des contraintes de santé ?</label>
+                        <select name="pmr" id="pmr">
+                            <option value="pmr">PMR</option>
+                            <option value="aveugle">aveugle</option>
+                            <option value="sourd">sourd</option>
+                            <option value="autre">autre</option>
+                        </select>
+
+                        <label for="docc">Document complémentaire :</label>
+                        <input type="file" name="docc">
+                    </div>
+                </form>
+                <button>SUIVANT</button>
             </div>
         </div>
     </section>
