@@ -152,8 +152,17 @@ nav a.selected img, .last-child.selected img {
 /* Home page */
 .second-sec {
     color: #1E1E1E;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 3.5rem;
+}
+
+.second-sec h1 {
+    font-size: 34px;
+    line-height: 87px;
+}
+
+.second-sec p {
+    font-size: 20px;
+    margin-bottom: 3rem;
 }
 
 .blue-sec {
