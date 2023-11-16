@@ -569,6 +569,8 @@ nav a.selected img, .last-child.selected img {
     display: flex;
     align-items: center;
     gap: .5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .timesheet-date .picker div, .timesheet-time div {
@@ -579,7 +581,6 @@ nav a.selected img, .last-child.selected img {
     padding: 1rem 1.5rem;
     border-radius: .5rem;
     box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.20);
-
 }
 
 .timesheet-date .picker div:hover, .timesheet-time div:hover {

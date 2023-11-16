@@ -28,13 +28,13 @@ if (window.location.pathname.includes('connexion.html')) {
         if (inscrip.style.display === 'none') {
             inscrip.style.display = 'block';
             connec.style.display = 'none';
-            SwitchForm.innerHTML = 'connecter vous.';
-            ToSwitch.innerHTML = 'déjà membre ?';
+            SwitchForm.innerHTML = 'Connectez-vous.';
+            ToSwitch.innerHTML = 'Déjà membre ?';
         } else {
             inscrip.style.display = 'none';
             connec.style.display = 'block';
-            SwitchForm.innerHTML = 'inscriver vous.';
-            ToSwitch.innerHTML = 'pas encore membre ?';
+            SwitchForm.innerHTML = 'Inscrivez-vous.';
+            ToSwitch.innerHTML = 'Pas encore membre ?';
         }
     });
 }
@@ -90,7 +90,7 @@ if (window.location.pathname.includes('racourcis.html')) {
     const boxTypes = [
         { image: 'img/Racou_Teams.png', label: 'Teams', code: 'T' },
         { image: 'img/Racou_Mail.png', label: 'Mail', code: 'M' },
-        { image: 'img/Racou_Linkdin.png', label: 'Linkdin', code: 'L' }
+        { image: 'img/Racou_Linkdin.png', label: 'LinkedIn', code: 'L' }
     ];
 
     for (let i = 0; i < 17; i++) {
