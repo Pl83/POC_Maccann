@@ -80,6 +80,8 @@ for (let i = 0; i < navLinks.length; i++) {
     }
 }
 
+
+
 // Génaration contenu racourcis
 
 if (window.location.pathname.includes('racourcis.html')) {
