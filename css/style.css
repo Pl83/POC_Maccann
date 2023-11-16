@@ -148,7 +148,7 @@ nav a.selected img, .last-child.selected img {
     gap: 1.5rem;
 }
 
-#BtnHeader button {
+#BtnHeader button:hover {
     cursor: pointer;
     border: 2px solid black;
 }
