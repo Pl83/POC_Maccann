@@ -148,6 +148,11 @@ nav a.selected img, .last-child.selected img {
     gap: 1.5rem;
 }
 
+#BtnHeader button {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
 /* Fin Global */
 
 /* Home page */
