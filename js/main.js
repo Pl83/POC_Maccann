@@ -163,4 +163,25 @@ if (window.location.pathname.includes('dmat.html')) {
     });
 }
 
-// Fin javascript
+// Mic search bar
+
+const Mic = document.getElementById('Mic');
+const SearchInput = document.getElementById('SearchInput');
+
+Mic.addEventListener('click', () => {
+    if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'fr-FR';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.start();
+        recognition.onresult = function (e) {
+            SearchInput.value = e.results[0][0].transcript;
+            recognition.stop();
+        };
+        recognition.onerror = function (e) {
+            recognition.stop();
+        };
+    }
+});
+
