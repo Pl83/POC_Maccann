@@ -162,3 +162,5 @@ if (window.location.pathname.includes('dmat.html')) {
         }
     });
 }
+
+// Fin javascript
